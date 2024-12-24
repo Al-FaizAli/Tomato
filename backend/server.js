@@ -19,17 +19,17 @@ app.use(cors())
 connectDB();
 
 // api endpoints
-app.use("/api/food",foodRouter)
-app.use("/images",express.static('uploads'))
+app.use("/api/food", foodRouter)
+app.use("/images", express.static('uploads'))
 app.use('/api/user', userRouter)
 app.use('/api/cart', cartRouter)
 app.use('/api/order', orderRouter)
 
-app.get("/",(req,res)=>{
-        res.send("API working")
+app.get("/", (req, res) => {
+    res.send("API working")
 })
 
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`Server started on http://localhost:${port}`)
 })
 
