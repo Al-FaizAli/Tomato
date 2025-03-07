@@ -17,7 +17,9 @@
     left: 6vw;
     animation: fadeIn 3s;
 }
-
+.header-contents button{
+    cursor: pointer;
+}
 .header-contents h2{
     font-weight: 500;
     color: white;

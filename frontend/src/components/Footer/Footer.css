@@ -37,8 +37,11 @@
 .footer-social-icons img{
     width: 40px;
     margin-right: 15px;
+    cursor: pointer;
 }
-
+.footer-social-icons img:hover{
+    transform: scale(1.05);
+}
 .footer hr{
     width: 100%;
     height: 2px;
