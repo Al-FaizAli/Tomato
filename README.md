@@ -37,8 +37,8 @@ This is a full-stack food ordering web application built using the MERN stack (M
 
 ### Clone the Repository
 ```sh
-git clone https://github.com/Al-FaizAli/FoodCorner.git
-cd FoodCorner
+git clone https://github.com/Al-FaizAli/Tomato.git
+cd Tomato
 ```
 
 ## Backend Setup
@@ -115,12 +115,12 @@ Pay using dummy visa card
 Use the admin panel to manage orders, menu items.
 
 ## Screenshots
-![1](https://github.com/Al-FaizAli/FoodCorner/assets/59603716/b3d604f0-ae0e-4e29-9b95-51f6327c3952)
-![2](https://github.com/Al-FaizAli/FoodCorner/assets/59603716/0cb56d94-a715-48bd-9a7d-05c876a05b2c)
-![3](https://github.com/Al-FaizAli/FoodCorner/assets/59603716/f5dd216a-dc8d-4042-9a96-4884cdb17aef)
-![Capture2](https://github.com/Al-FaizAli/FoodCorner/assets/59603716/22fc6a58-b713-4ab7-babb-cff5844e7c55)
-![Capture3](https://github.com/Al-FaizAli/FoodCorner/59603716/0f7fe1ab-8c29-4fa2-bdb2-7212994cdf80)
-![Capture4](https://github.com/Al-FaizAli/FoodCorner/assets/59603716/f41881c6-e148-4215-9953-458bbe602007)
+![1](https://github.com/Al-FaizAli/Tomato/assets/59603716/b3d604f0-ae0e-4e29-9b95-51f6327c3952)
+![2](https://github.com/Al-FaizAli/Tomato/assets/59603716/0cb56d94-a715-48bd-9a7d-05c876a05b2c)
+![3](https://github.com/Al-FaizAli/Tomato/assets/59603716/f5dd216a-dc8d-4042-9a96-4884cdb17aef)
+![Capture2](https://github.com/Al-FaizAli/Tomato/assets/59603716/22fc6a58-b713-4ab7-babb-cff5844e7c55)
+![Capture3](https://github.com/Al-FaizAli/Tomato/59603716/0f7fe1ab-8c29-4fa2-bdb2-7212994cdf80)
+![Capture4](https://github.com/Al-FaizAli/Tomato/assets/59603716/f41881c6-e148-4215-9953-458bbe602007)
 
 
 ## API Documentation
