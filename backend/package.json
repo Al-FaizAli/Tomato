@@ -1,6 +1,6 @@
 {
   "build": "npm run generate-html && vite build",
-  "generate-html": "mkdir -p dist && cp index.html dist/", 
+  "generate-html": "cp index.html dist/",
   "name": "backend",
   "version": "1.0.0",
   "main": "api/server.js",
