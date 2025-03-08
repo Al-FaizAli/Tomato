@@ -71,5 +71,4 @@ app.get("/", (req, res) => {
     res.send("API working");
 });
 
-// Export the app (Required for Vercel)
 export default app;
