@@ -14,4 +14,4 @@ export const assets = {
     AlFaiz
 }
 
-export const url = "https://foodcorner-1.onrender.com";
+export const url = "https://tomato-backend-f4y1.onrender.com";
