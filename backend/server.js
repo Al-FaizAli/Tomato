@@ -1,42 +1,47 @@
-import express from 'express'
-import cors from 'cors'
-import { connectDB } from './config/db.js'
-import foodRouter from './routes/foodRoute.js'
+import express from 'express';
+import cors from 'cors';
+import { connectDB } from './config/db.js';
+import foodRouter from './routes/foodRoute.js';
 import userRouter from './routes/userRoute.js';
 import cartRouter from './routes/cartRoute.js';
 import orderRouter from './routes/orderRoute.js';
-import dotenv from "dotenv";
-import 'dotenv/config';
+import dotenv from 'dotenv';
 dotenv.config();
 
-//app config
-const app = express()
-const port = 5000
+// App configuration
+const app = express();
+const port = process.env.PORT || 5000;
 
-// middleware
-app.use(express.json())
+// Middleware
+app.use(express.json());
+
+// CORS configuration
+const allowedOrigins = ['https://tomato-admin-vert.vercel.app'];
 const corsOptions = {
-    origin: /\.onrender\.com$/,
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
 };
 app.use(cors(corsOptions));
 
-
-
-//db connection
+// Database connection
 connectDB();
 
-// api endpoints
-app.use("/api/food", foodRouter)
-app.use("/images", express.static('uploads'))
-app.use('/api/user', userRouter)
-app.use('/api/cart', cartRouter)
-app.use('/api/order', orderRouter)
+// API endpoints
+app.use('/api/food', foodRouter);
+app.use('/images', express.static('uploads'));
+app.use('/api/user', userRouter);
+app.use('/api/cart', cartRouter);
+app.use('/api/order', orderRouter);
 
-app.get("/", (req, res) => {
-    res.send("API working")
-})
+app.get('/', (req, res) => {
+  res.send('API working');
+});
 
 app.listen(port, () => {
-    console.log(`Server started on http://localhost:${port}`)
-})
+  console.log(`Server started on http://localhost:${port}`);
+});
