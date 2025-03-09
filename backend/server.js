@@ -14,19 +14,7 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json());
-
-// CORS configuration
-const allowedOrigins = ['https://tomato-admin-vert.vercel.app'];
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-};
-app.use(cors(corsOptions));
+app.use(cors({ origin: "*" }));
 
 // Database connection
 connectDB();
@@ -39,9 +27,9 @@ app.use('/api/cart', cartRouter);
 app.use('/api/order', orderRouter);
 
 app.get('/', (req, res) => {
-  res.send('API working');
+    res.send('API working');
 });
 
 app.listen(port, () => {
-  console.log(`Server started on http://localhost:${port}`);
+    console.log(`Server started on http://localhost:${port}`);
 });
